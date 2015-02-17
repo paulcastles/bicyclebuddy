@@ -1,25 +1,45 @@
-<%= form_for(@route) do |f| %>
-  <% if @route.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@route.errors.count, "error") %> prohibited this route from being saved:</h2>
+<%= form_for @route, :html => { :class => "form-horizontal route" } do |f| %>
 
-      <ul>
-      <% @route.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @route.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@route.errors.count, "error") %> prohibited this route from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @route.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@route[:name]) %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+  <div class="control-group">
+    <%= f.label :image, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :image, :class => 'form-control' %>
+    </div>
+    <%= error_span(@route[:image]) %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="control-group">
+    <%= f.label :category_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :category_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@route[:category_id]) %>
   </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            routes_path, :class => 'btn btn-default' %>
+
 <% end %>
