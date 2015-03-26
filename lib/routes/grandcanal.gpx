@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1">
+ <trk>
+  <name>Grand Canal</name>
+  <category>Waterways, Parks and Beaches</category>
+  
+  <trkseg>
+   <trkpt lat="53.33872" lon="-6.23926"/>
+   <trkpt lat="53.33867" lon="-6.23915"/>
+   <trkpt lat="53.33848" lon="-6.23938"/>
+   <trkpt lat="53.3373" lon="-6.24115"/>
+   <trkpt lat="53.33638" lon="-6.24258"/>
+   <trkpt lat="53.33614" lon="-6.24208"/>
+   <trkpt lat="53.33601" lon="-6.24221"/>
+   <trkpt lat="53.33584" lon="-6.24233"/>
+   <trkpt lat="53.33471" lon="-6.24399"/>
+   <trkpt lat="53.33461" lon="-6.24403"/>
+   <trkpt lat="53.33449" lon="-6.244"/>
+   <trkpt lat="53.33441" lon="-6.24398"/>
+   <trkpt lat="53.33428" lon="-6.24432"/>
+   <trkpt lat="53.33404" lon="-6.24525"/>
+   <trkpt lat="53.33379" lon="-6.24605"/>
+   <trkpt lat="53.33367" lon="-6.24647"/>
+   <trkpt lat="53.33343" lon="-6.24719"/>
+   <trkpt lat="53.33332" lon="-6.24755"/>
+   <trkpt lat="53.33259" lon="-6.25012"/>
+   <trkpt lat="53.33218" lon="-6.25149"/>
+   <trkpt lat="53.33195" lon="-6.25259"/>
+   <trkpt lat="53.33189" lon="-6.25294"/>
+   <trkpt lat="53.33169" lon="-6.25392"/>
+   <trkpt lat="53.33144" lon="-6.25498"/>
+   <trkpt lat="53.33088" lon="-6.25758"/>
+   <trkpt lat="53.33059" lon="-6.25898"/>
+   <trkpt lat="53.33031" lon="-6.26019"/>
+   <trkpt lat="53.33016" lon="-6.26098"/>
+   <trkpt lat="53.33007" lon="-6.26182"/>
+   <trkpt lat="53.33003" lon="-6.26232"/>
+   <trkpt lat="53.32997" lon="-6.26339"/>
+   <trkpt lat="53.32994" lon="-6.26391"/>
+   <trkpt lat="53.32996" lon="-6.26427"/>
+   <trkpt lat="53.33016" lon="-6.26427"/>
+   <trkpt lat="53.33022" lon="-6.26427"/>
+   <trkpt lat="53.33019" lon="-6.26441"/>
+   <trkpt lat="53.33016" lon="-6.2648"/>
+   <trkpt lat="53.33018" lon="-6.2649"/>
+   <trkpt lat="53.33022" lon="-6.26498"/>
+   <trkpt lat="53.33024" lon="-6.265"/>
+   <trkpt lat="53.33023" lon="-6.26511"/>
+   <trkpt lat="53.33016" lon="-6.26549"/>
+   <trkpt lat="53.33012" lon="-6.26611"/>
+   <trkpt lat="53.33006" lon="-6.26711"/>
+   <trkpt lat="53.33007" lon="-6.26718"/>
+   <trkpt lat="53.33013" lon="-6.26725"/>
+   <trkpt lat="53.33011" lon="-6.26734"/>
+   <trkpt lat="53.33" lon="-6.26876"/>
+   <trkpt lat="53.32996" lon="-6.26905"/>
+   <trkpt lat="53.32977" lon="-6.27206"/>
+   <trkpt lat="53.32977" lon="-6.27358"/>
+   <trkpt lat="53.3298" lon="-6.27441"/>
+   <trkpt lat="53.32983" lon="-6.27546"/>
+   <trkpt lat="53.32979" lon="-6.27547"/>
+   <trkpt lat="53.32958" lon="-6.27554"/>
+  </trkseg>
+ </trk>
+</gpx>

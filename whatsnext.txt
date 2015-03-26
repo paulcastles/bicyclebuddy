@@ -1,0 +1,19 @@
+TODO
+- comment code
+- write html for info box
+x delete routes with no points data
+x remove ability to delete/edit/create routes
+x remove unecessary route info from home page list
+x create some new categories
+x read in routes from multiple files (10) - create route, output file, edit file with name/category etc. Look up array.each or 10.times. Put the current code in a loop
+
+NEXT
+x click on a route and it shows on the map
+- wireframing with balsamiq
+- user favouriting of routes
+- user comments/photographs/points of interest
+- search/filter by category
+- weather
+- compare route direction with wind direction
+- warning for wind speeds
+

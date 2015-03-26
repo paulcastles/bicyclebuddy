@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :favourites
+
+  resources :comments
+
   root :to => redirect('/routes')
   devise_for :users
   resources :categories
