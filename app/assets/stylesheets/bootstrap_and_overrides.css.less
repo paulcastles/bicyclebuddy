@@ -15,17 +15,23 @@
 // Font Awesome
 @import "fontawesome/font-awesome";
 
+.navbar-header div {
+  display: inline-block;
+}
+
+.weather-info {
+  padding: 10px;
+  width: 50px;
+  font-weight: bold;
+}
+
+
 #map-container {
-   height: 400px;
-   border-radius: 16px 16px;
-   border-color: #fff;
-   border-style: solid;
-   box-shadow: 2px 2px 10px #B1B1B1;
-   margin-top: 25px;
-   border-width: 7px;
+   height: 600px;
  }
+
 #map-canvas {
-   height: 384px;
+   height: 600px;
    width: 100%;
  }
 
@@ -37,7 +43,9 @@
 #map-container #map-canvas label {
   width: auto; display:inline;
 }
-
+@media (max-width: 979px) { 
+  body { padding-top: 0px !important; }
+}
 // Glyphicons
 //@import "twitter/bootstrap/sprites.less";
 

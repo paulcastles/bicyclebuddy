@@ -31,7 +31,7 @@ $( document ).ready(function() {
      });
      
      var cyclePlanCoordinates = $( "#map-container" ).data("route");
-     console.log(cyclePlanCoordinates);
+  
      var cyclePlanLatLngsArray = [];
      $.each(cyclePlanCoordinates, function(index, point) {
        cyclePlanLatLngsArray.push(new google.maps.LatLng(point[0], point[1]));
