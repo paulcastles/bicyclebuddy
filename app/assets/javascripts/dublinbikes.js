@@ -69,6 +69,9 @@ function getStationData(stationNumber, map, marker) {
 function constructInfoWindowHtml(station) {
   var infoWindow = "";
   if (station.status === "CLOSED") {
+    infoWindow += "<p>";
+    infoWindow += station.name;
+    infoWindow += "</p>";
     infoWindow += station.status;
     
   } 
