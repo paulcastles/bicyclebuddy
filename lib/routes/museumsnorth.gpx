@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1">
+ <trk>
+  <name>Museums North</name>
+  <category>Museums and The Arts</category>
+  
+  <trkseg>
+   <trkpt lat="53.34849" lon="-6.27796"/>
+   <trkpt lat="53.34896" lon="-6.27783"/>
+   <trkpt lat="53.349" lon="-6.27782"/>
+   <trkpt lat="53.34889" lon="-6.27705"/>
+   <trkpt lat="53.34875" lon="-6.27628"/>
+   <trkpt lat="53.34922" lon="-6.276"/>
+   <trkpt lat="53.34942" lon="-6.27588"/>
+   <trkpt lat="53.34944" lon="-6.27558"/>
+   <trkpt lat="53.34955" lon="-6.27468"/>
+   <trkpt lat="53.34961" lon="-6.27468"/>
+   <trkpt lat="53.34971" lon="-6.2747"/>
+   <trkpt lat="53.35" lon="-6.27467"/>
+   <trkpt lat="53.35008" lon="-6.27464"/>
+   <trkpt lat="53.35013" lon="-6.27461"/>
+   <trkpt lat="53.35015" lon="-6.27446"/>
+   <trkpt lat="53.35016" lon="-6.274"/>
+   <trkpt lat="53.35016" lon="-6.27354"/>
+   <trkpt lat="53.35018" lon="-6.27305"/>
+   <trkpt lat="53.35022" lon="-6.27268"/>
+   <trkpt lat="53.35031" lon="-6.27196"/>
+   <trkpt lat="53.35038" lon="-6.27159"/>
+   <trkpt lat="53.35058" lon="-6.27089"/>
+   <trkpt lat="53.35074" lon="-6.27053"/>
+   <trkpt lat="53.35107" lon="-6.27006"/>
+   <trkpt lat="53.35135" lon="-6.26979"/>
+   <trkpt lat="53.35203" lon="-6.26915"/>
+   <trkpt lat="53.35254" lon="-6.2687"/>
+   <trkpt lat="53.35292" lon="-6.26834"/>
+   <trkpt lat="53.3527" lon="-6.2679"/>
+   <trkpt lat="53.35207" lon="-6.26678"/>
+   <trkpt lat="53.35259" lon="-6.26598"/>
+   <trkpt lat="53.35216" lon="-6.26528"/>
+   <trkpt lat="53.35196" lon="-6.26495"/>
+   <trkpt lat="53.35197" lon="-6.26488"/>
+   <trkpt lat="53.35246" lon="-6.26391"/>
+   <trkpt lat="53.35353" lon="-6.26545"/>
+   <trkpt lat="53.35378" lon="-6.26506"/>
+   <trkpt lat="53.35398" lon="-6.26457"/>
+   <trkpt lat="53.35398" lon="-6.26457"/>
+   <trkpt lat="53.35428" lon="-6.26384"/>
+   <trkpt lat="53.35428" lon="-6.26384"/>
+   <trkpt lat="53.35444" lon="-6.26354"/>
+   <trkpt lat="53.35452" lon="-6.26351"/>
+   <trkpt lat="53.35498" lon="-6.26273"/>
+   <trkpt lat="53.35538" lon="-6.26191"/>
+   <trkpt lat="53.35412" lon="-6.26024"/>
+  </trkseg>
+ </trk>
+</gpx>

@@ -5,12 +5,22 @@ Devise.setup do |config|
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # config.secret_key = '2a202eee5cf140e86bad4643950f96b93b22bb08d130cee054165de7d15c237289266ff1ac1f07e16326a0e4b92e235791c04c4b82afb3d8c73cad5e013ad04e'
+  
+  ActionMailer::Base.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "gmail.com",
+    :user_name            => "bicyclebuddy.notifications",
+    :password             => "bicyclebuddy15",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
+  }  
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'bicyclebuddy.notifications@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'

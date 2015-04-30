@@ -4,18 +4,15 @@
     <div id="map-canvas">
     </div>
    </div>
+    Sign up here<br><a href="http://www.dublinbikes.ie/Subscription" target="_blank"><img src='http://bicyclebuddy-193553.euw1-2.nitrousbox.com/assets/dublinbike.jpg' width="80" height="40"></a>
 </div>
-<div class="span3">
-  <div class="page-header">
-    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-  </div>
-
+<div class="span3 routes-sidebar">
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:category_id) %></th>
+    <th>Route</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -24,7 +21,7 @@
 <!--         <td><%= link_to route.id, route_path(route) %></td> -->
         <td><%= link_to route.name, route_path(route) %></td>
 
-        <td><%= route.category.name %></td>
+        <td class="category-name"><%= route.category.name %></td>
 <!--         <td><%=l route.created_at %></td>   -->
 <!--         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
@@ -39,4 +36,6 @@
     <% end %>
   </tbody>
 </table>
+
+
 </div>

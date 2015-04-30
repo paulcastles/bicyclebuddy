@@ -10,6 +10,9 @@ class RoutesController < ApplicationController
   # GET /routes/1
   # GET /routes/1.json
   def show
+    @routes = Route.all
+    @route = Route.find(params[:id])
+    @against_the_wind = get_against_the_wind_percentage
   end
 
   # GET /routes/new
@@ -72,5 +75,34 @@ class RoutesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def route_params
       params.require(:route).permit(:name, :image)
+    end
+  
+    def get_against_the_wind_percentage
+      # wind bearing range +/- 90 deg
+      windBearing = (@forecast.hourly.data.first.windBearing)
+      limit1 = (windBearing - 90)%360 
+      limit2 = (windBearing + 90)%360 #eg. if upper limit = 390, this will return 30
+      lowerLimit = [limit1, limit2].min
+      upperLimit = [limit1, limit2].max
+
+      # loop through each point on route, calculate if direction is against/within bearing range
+      countWith = 0
+      countAgainst = 0
+      @route.points.each_with_index do |point1, i|
+        if i < @route.points.size-1  
+          point2 = @route.points[i+1]
+          direction = Geocoder::Calculations.bearing_between(point1, point2)
+          oppositeDirection = (direction + 180)%360
+          
+           # keep count of each, calulate percentage against
+          if (lowerLimit..upperLimit).include?(oppositeDirection.to_i)
+            countAgainst+=1
+          else
+            countWith+=1
+          end
+        end
+        
+      end
+      countAgainst*100/(countWith+countAgainst)
     end
 end

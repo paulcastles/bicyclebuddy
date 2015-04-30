@@ -1,3 +1,24 @@
 // Place all the styles related to the routes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.favourite:hover{text-decoration: none;}
+a.favourite:hover .icon-star{color: #FA0;}
+.icon-star.active{color: gold;}
+.new_favourite button{background: none; border: none; padding: 0; margin: 0;}
+.new_favourite{ display: inline;}
+.new_favourite button .icon-star{color: #FAECFA;}
+.new_favourite button:hover .icon-star{color: gold;}
+.category-name{font-size: 10px;}
+.route-info {
+  background-color: #800080;
+  color: white;
+  width: 100%; 
+}
+.route-name{font-weight: bold; font-size: 17px;}
+.against-the-wind .figure{color: deeppink; font-size: 15px; font-weight: bold}
+
+.routes-sidebar{background-color: #FFF9FC;}
+
+table td{vertical-align: middle;}
+

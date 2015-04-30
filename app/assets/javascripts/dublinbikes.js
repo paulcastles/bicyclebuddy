@@ -13,13 +13,14 @@ $( document ).ready(function() {
 
 
      $.each(stations, function(index, station) {
-       var image = 'http://bicyclebuddy-193553.euw1-2.nitrousbox.com/assets/marker.png';
+       var image = 'http://bicyclebuddy-193553.euw1-2.nitrousbox.com/assets/marker.gif';
        var stationLatlng = new google.maps.LatLng(station.latitude,station.longitude);
        var marker = new google.maps.Marker({
          position: stationLatlng,
          map: map,
          title: station.name,
          icon: image
+         
        });
        
        google.maps.event.addListener(marker, 'click', function() {
@@ -40,9 +41,9 @@ $( document ).ready(function() {
        var cyclePath = new google.maps.Polyline({
          path: cyclePlanLatLngsArray,
          geodesic: true,
-         strokeColor: '#FF0000',
+         strokeColor: '#FF1493',
          strokeOpacity: 1.0,
-         strokeWeight: 2
+         strokeWeight: 4
        });
 
        cyclePath.setMap(map);
@@ -57,10 +58,28 @@ $( document ).ready(function() {
 function getStationData(stationNumber, map, marker) {
   var url = "https://api.jcdecaux.com/vls/v1/stations/" + stationNumber + "?contract=Dublin&apiKey=f41ee417aabaeaa8cd43cc003ef316a5943e4316";
   
-  $.getJSON(url, function(json){
-    infowindowContent = JSON.stringify(json);
+  $.getJSON(url, function(station){
+    infowindowContent = constructInfoWindowHtml(station);
     infowindow.setContent(infowindowContent);
     infowindow.open(map,marker);
   });
  
+}
+//name on closed
+function constructInfoWindowHtml(station) {
+  var infoWindow = "";
+  if (station.status === "CLOSED") {
+    infoWindow += station.status;
+    
+  } 
+  else {
+  infoWindow += "<p>";
+  infoWindow += station.name;
+  infoWindow += "</p><p>Stands: ";
+  infoWindow += station.available_bike_stands;
+  infoWindow += "</p><p>Bikes: ";
+  infoWindow += station.available_bikes;
+ 
+  }
+  return infoWindow;
 }

@@ -4,7 +4,8 @@ class CommentsController < ApplicationController
   respond_to :html
 
   def index
-    @comments = Comment.all
+    @comments = Comment.page(params[:page]).order('created_at DESC').per_page(10)
+    
     respond_with(@comments)
   end
 

@@ -16,7 +16,12 @@
  */
 @import "bootstrap_and_overrides.css.less";
 
-body { padding-top: 100px; }
+body { padding-top: 100px;
+    background-color: #B2B2B2;
+    color: purple;
+}
+
+
 footer { margin-top: 100px; }
 table, td, th { vertical-align: middle; border: none; }
 th { border-bottom: 1px solid #DDD; }

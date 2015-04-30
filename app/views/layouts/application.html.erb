@@ -22,8 +22,8 @@ type = "text/javascript"></script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
-          center: { lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: { lat: 53.347, lng: -6.251},
+          zoom: 13
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
@@ -44,7 +44,7 @@ type = "text/javascript"></script>
         <span class="icon-bar"></span>
       </button>
       <div>
-        <a class="navbar-brand" href="/"><span class="fa-bicycle"></span>Bicycle buddy</a>
+        <a class="navbar-brand" href="/">BicycleBuddy</a>
       </div>
       <div class="weather-widget">
         <div class="weather-info">
@@ -55,11 +55,28 @@ type = "text/javascript"></script>
         </div>
 
         <div class="weather-info">
-          <%= (@forecast.hourly.data.first.windSpeed*1.61).to_i %> km/h 
+          <% windSpeed = (@forecast.hourly.data.first.windSpeed*1.61).to_i %>
+          <%  case windSpeed
+              when 0..9
+                windMessage = "Calm. Enjoy your cycle"
+              when 10..19
+                windMessage = "The wind is picking up a little"
+              when 20..29
+                windMessage = "The wind will affect your cycle"
+              when 30..39
+                windMessage = "Be careful of passing trucks"
+              when 40..49
+                windMessage = "Consider postponing your journey"
+            else
+                windMessage = "Danger!"
+            end %>
+          <%= windSpeed %> km/h
+          
+          
         </div>
         <div class="weather-info">
           <% windBearing = @forecast.hourly.data.first.windBearing 
-
+            
               case windBearing
               when 337.5..360
                 windBearingSymbol = "N"
@@ -82,9 +99,11 @@ type = "text/javascript"></script>
               else
                 windBearingSymbol = "Brokeded"
               end %>
-          <%= windBearingSymbol %><br>&nbsp;
+          
+          <%= windBearingSymbol %><br>&nbsp;<br>
+          
           </div>
-        
+        <span class="hidden-phone"><%= windMessage %></span>
       </div>
     </div>
     <div class="collapse navbar-collapse pull-right">
@@ -123,11 +142,7 @@ type = "text/javascript"></script>
   </div>  
 </div>
 
-  <footer>
-  <div class="container">
-    
-  </div>
-</footer>
+  
 <script src="//railsgirls.com/assets/bootstrap.js"></script>
 </body>
 </html>
